@@ -8,13 +8,11 @@ cy:
   home:
     show:
       heading_html: |
-        Croeso i'r <br />
+        Croeso i'r
         Gwasanaeth Cynghori Ariannol
       summary_list_html: |
-        <li>Cymryd arian diduedd ac annibynnol, rhad ac am ddim cynghori</li>
-        <li>Mynediad uniongyrchol at ein prif offer a chanllawiau</li>
-        <li>Gwybodaeth am y newyddion diweddaraf a allai effeithio arnoch chi</li>
+        * Cymryd arian diduedd ac annibynnol, rhad ac am ddim cynghori
+        * Mynediad uniongyrchol at ein prif offer a chanllawiau
+        * Gwybodaeth am y newyddion diweddaraf a allai effeithio arnoch chi
       introduction_text_html: |
-        <p>
-          This page is yet to be translated.
-        </p>
+        This page is yet to be translated.
