@@ -53,6 +53,8 @@ Rails.application.routes.draw do
 
       end
     end
+
+    mount ActionPlans::Engine => '/tools/:tool_id', constraints: { tool_id: %r{redundancy-advice-plan} }
   end
 
   match '*path', via: :all, to: -> env { [501, {}, []] }

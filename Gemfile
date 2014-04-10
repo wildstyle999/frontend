@@ -66,8 +66,6 @@ end
 group :test, :development do
   gem 'ejs'
   gem 'dotenv-rails'
-  gem 'mas-development_dependencies',
-      git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
   gem 'chai-jquery-rails'
   gem 'byebug'
   gem 'sqlite3' # the database is not used yet, so sqlite is sufficient
@@ -76,3 +74,11 @@ end
 group :doc do
   gem 'sdoc', require: false
 end
+
+# action_plans playground
+gem 'mas-assets', path: '../mas-assets'
+gem 'mas-engine', path: '../mas-engine'
+gem 'mas-templating', path: '../mas-templating'
+gem 'mas-development_dependencies', path: '../mas-development_dependencies'
+gem 'mysql2'
+gem 'action_plans', path: '../action_plans'

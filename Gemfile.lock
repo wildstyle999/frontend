@@ -12,26 +12,52 @@ GIT
   specs:
     tidy-html5 (0.1.0)
 
-GIT
-  remote: https://github.com/moneyadviceservice/mas-development_dependencies.git
-  revision: 02c7fa8952986e1337d6e257ce2442d980c3e9f4
+PATH
+  remote: ../action_plans
+  specs:
+    action_plans (0.1.0)
+      autoprefixer-rails
+      draper
+      hashie
+      jquery-rails-cdn
+      protected_attributes
+      rails (= 4.1.0)
+
+PATH
+  remote: ../mas-assets
+  specs:
+    mas-assets (1.0.0)
+      compass-rails
+      google-analytics-rails (~> 0.0.4)
+      sass-rails
+      susy (~> 1.0.9)
+
+PATH
+  remote: ../mas-development_dependencies
   specs:
     mas-development_dependencies (2.1.0)
-      capybara (~> 2.1)
-      capybara-screenshot (~> 0.3.13)
+      capybara
+      capybara-screenshot
       cucumber-rails
       database_cleaner
-      factory_girl_rails (~> 4.0)
-      konacha (>= 3.0)
-      poltergeist (~> 1.3)
-      pry-rails
-      pry-rescue
-      rack-livereload
-      rails (>= 3.2)
-      rspec-rails (~> 2.0)
+      factory_girl_rails
+      poltergeist
+      rails (= 4.1.0)
+      rspec-rails
       shoulda-matchers
       site_prism
       timecop
+
+PATH
+  remote: ../mas-engine
+  specs:
+    mas-engine (0.1.4)
+      rails (= 4.1.0)
+
+PATH
+  remote: ../mas-templating
+  specs:
+    mas-templating (1.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -68,7 +94,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.0)
-    autoprefixer-rails (1.1.20140403)
+    autoprefixer-rails (1.1.20140410)
       execjs
     builder (3.2.2)
     byebug (2.7.0)
@@ -103,7 +129,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    colorize (0.7.2)
     columnize (0.3.6)
     compass (0.12.5)
       chunky_png (~> 1.2)
@@ -168,6 +193,7 @@ GEM
       rails (>= 3.2.0)
     gherkin (2.12.2)
       multi_json (~> 1.3)
+    google-analytics-rails (0.0.5)
     guard (2.6.0)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -194,24 +220,20 @@ GEM
       sass (>= 3.1)
     guard-shell (0.6.1)
       guard (>= 1.1.0)
+    hashie (2.1.0)
     hike (1.2.3)
     html_validation (1.1.0)
     http_parser.rb (0.5.3)
     i18n (0.6.9)
-    interception (0.5)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-rails-cdn (1.0.1)
+      jquery-rails
     jshint_ruby (0.1)
       execjs
     json (1.8.1)
     kgio (2.9.2)
-    konacha (3.2.1)
-      actionpack (>= 3.1, < 5)
-      capybara
-      colorize
-      railties (>= 3.1, < 5)
-      sprockets
     kss (0.5.0)
     launchy (2.4.2)
       addressable (~> 2.3)
@@ -243,19 +265,14 @@ GEM
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
     polyglot (0.3.4)
+    protected_attributes (1.0.7)
+      activemodel (>= 4.0.1, < 5.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    pry-rails (0.3.2)
-      pry (>= 0.9.10)
-    pry-rescue (1.4.0)
-      interception (>= 0.4)
-      pry
     psych (2.0.5)
     rack (1.5.2)
-    rack-livereload (0.3.15)
-      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.0)
@@ -339,6 +356,9 @@ GEM
       sprockets (~> 2.8)
     sqlite3 (1.3.9)
     statsd-ruby (1.2.1)
+    susy (1.0.9)
+      compass (>= 0.12.2)
+      sass (>= 3.2.0)
     syslog-logger (1.6.8)
     thin (1.6.2)
       daemons (>= 1.0.9)
@@ -376,6 +396,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  action_plans!
   activerecord-session_store
   autoprefixer-rails
   byebug
@@ -403,7 +424,10 @@ DEPENDENCIES
   jshint_ruby
   kss
   link_header
+  mas-assets!
   mas-development_dependencies!
+  mas-engine!
+  mas-templating!
   meta-tags!
   mysql2
   nokogiri
