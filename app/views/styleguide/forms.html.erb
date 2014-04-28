@@ -1,1 +1,161 @@
-<h1>Forms</h1>
+<h1>Form Demo</h1>
+
+<p>Required fields are followed by *</p>
+
+<form class="form">
+
+  <div class="form__error-summary">
+    <h2>There was a problem submitting the form</h2>
+    <ol>
+      <li><a href="#error1">Enter your first name</a></li>
+      <li><a href="#error2">Re-type your email address</a></li>
+    </ol>
+  </div>
+
+  <h2>About you</h2>
+  <fieldset>
+
+    <p class="form__item is-form-error">
+      <span class="form__validation-message" id="error1">1. Enter your first name</span>
+      <label for="first-name" class="form__label-heading">First name</label>
+      <input id="first-name" type="text" aria-invalid="true" />
+    </p>
+
+    <p class="form__item is-form-error">
+      <span class="form__validation-message" id="error2">2. Re-type your email address</span>
+      <label for="email" class="form__label-heading">Email address *
+        <span class="visually-hidden">required</span>
+      </label>
+      <input id="email" type="email" aria-invalid="true" />
+    </p>
+
+    <div class="form__item">
+      <label for="password" class="form__label-heading">Password *
+        <span class="visually-hidden">required</span>
+      </label>
+      <input id="password" type="password" required="required"
+             aria-required="true" aria-describedby="first-name-hint"/>
+      <p class="form__hint" id="first-name-hint">At least 8 characters</p>
+    </div>
+
+    <p class="form__item">
+      <label for="savings" class="form__label-heading">How much do you save a month?</label>
+      <input id="savings" placeholder="£" type="number" />
+    </p>
+
+    <p class="form__item">
+      <label for="saving-proportion" class="form__label-heading">What proportion of your income do
+        you save?</label>
+      <input id="saving-proportion" placeholder="%" type="number" />
+    </p>
+
+    <fieldset class="form__item">
+      <legend>
+        <span>Gender</span>
+      </legend>
+      <p class="form__inline-group">
+        <label for="male">
+          <input id="male" type="radio" name="gender">
+          Male
+        </label>
+        <label for="female">
+          <input id="female" type="radio" name="gender">
+          Female
+        </label>
+      </p>
+    </fieldset>
+
+    <fieldset class="form__item">
+      <legend>
+        <span>Do you own any of the following?</span>
+      </legend>
+      <p>
+        <label for="house">
+          <input id="house" type="checkbox" name="own">
+          House
+        </label>
+      </p>
+      <p>
+        <label for="car">
+          <input id="car" type="checkbox" name="own">
+          Car
+        </label>
+      </p>
+      <p>
+        <label for="motorbike">
+          <input id="motorbike" type="checkbox" name="own">
+          Motorbike
+        </label>
+      </p>
+    </fieldset>
+
+    <p class="form__item">
+      <label for="county" class="form__label-heading">County</label>
+      <select id="day">
+        <option value="1">Aberdeen City</option>
+        <option value="2" selected>Berkshire</option>
+        <!-- Other options go here -->
+      </select>
+    </p>
+
+    <fieldset class="form__item">
+      <legend aria-describedby="dob-hint">
+        <span>Date of birth</span>
+      </legend>
+
+      <div class="form__inline-group">
+        <p>
+          <label for="day" class="visually-hidden">Day</label>
+          <select id="day">
+            <option value="Day">Day</option>
+            <!-- Other options go here -->
+          </select>
+        </p>
+        <p>
+          <label for="month" class="visually-hidden">Month</label>
+          <select id="month">
+            <option value="Month">Month</option>
+            <!-- Other options go here -->
+          </select>
+        </p>
+        <p>
+          <label for="year" class="visually-hidden">Year</label>
+          <select id="year">
+            <option value="Year">Year</option>
+            <!-- Other options go here -->
+          </select>
+        </p>
+      </div>
+
+      <p id="dob-hint" class="form__extra-info">So we can provide you with age-related advice</p>
+
+    </fieldset>
+
+    <p class="form__item">
+      <label for="textarea" class="form__label-heading">Please leave a comment</label>
+      <textarea id="textarea"></textarea>
+    </p>
+
+    <p>
+      <input id="newsletter" type="checkbox" name="newsletter" value="1">
+      <label for="newsletter">I wish to subscribe to the free newsletter</label>
+    </p>
+
+    <p>
+      <input id="terms" type="checkbox" name="toppings" value="1">
+      <label for="terms">I agree to the
+        <a href="/terms-and-conditions">terms and conditions</a>
+      </label>
+    </p>
+
+    <p>We will never share your personal data with any third party.<br />
+      You information is private and confidential
+      <a href="/privacy">Our private policy</a>.
+    </p>
+
+    <a href="/resume">No I'll enter these details later</a>
+
+    <input class="button" type="submit" value="Save">
+  </fieldset>
+
+</form>
