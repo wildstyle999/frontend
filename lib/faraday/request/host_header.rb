@@ -8,6 +8,6 @@ module Faraday
       @app.call(env)
     end
   end
-
-  register_middleware :request, host_header: Faraday::Request::HostHeader
 end
+
+Faraday::Request.register_middleware(host_header: -> { Faraday::Request::HostHeader })

@@ -8,6 +8,6 @@ module Faraday
       @app.call(env)
     end
   end
-
-  register_middleware :request, x_forwarded_proto: Faraday::Request::XForwardedProto
 end
+
+Faraday::Request.register_middleware(x_forwarded_proto: -> { Faraday::Request::XForwardedProto })

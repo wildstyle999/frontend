@@ -12,6 +12,6 @@ module Faraday
       end
     end
   end
-
-  register_middleware :response, link_header: Faraday::Response::LinkHeader
 end
+
+Faraday::Response.register_middleware(link_header: -> { Faraday::Response::LinkHeader })

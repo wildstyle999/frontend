@@ -10,6 +10,6 @@ module Faraday
       @app.call(env)
     end
   end
-
-  register_middleware :request, request_id: Faraday::Request::RequestId
 end
+
+Faraday::Request.register_middleware(request_id: -> { Faraday::Request::RequestId })
