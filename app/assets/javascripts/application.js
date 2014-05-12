@@ -36,24 +36,24 @@ require(['common'], function(MAS) {
   require(['jquery', 'collapsable'], function($, Collapsable) {
     $(document).ready(function() {
       // Primary Nav
-      new Collapsable({
-        name: 'primaryNav',
-        closeOffFocus: true,
-        accordion: true,
-        triggerEl: '#primary-nav > li > a',
-        targetEl: '.primary-nav__dropdown',
-        parentWrapper: '#primary-nav'
-      });
+//      new Collapsable({
+//        name: 'primaryNav',
+//        closeOffFocus: true,
+//        accordion: true,
+//        triggerEl: '#primary-nav > li > a',
+//        targetEl: '.primary-nav__dropdown',
+//        parentWrapper: '#primary-nav'
+//      });
 
       // Mobile Nav
-      new Collapsable({
-        name: 'mobileNav',
-        closeOffFocus: false,
-        accordion: true,
-        triggerEl: '.mobile-nav a',
-        targetType: 'href',
-        parentWrapper: '#primary-nav'
-      });
+//      new Collapsable({
+//        name: 'mobileNav',
+//        closeOffFocus: false,
+//        accordion: true,
+//        triggerEl: '.mobile-nav a',
+//        targetType: 'href',
+//        parentWrapper: '#primary-nav'
+//      });
 
       // Article Collapsables
       new Collapsable({
