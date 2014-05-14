@@ -1,9 +1,37 @@
-.l-action-plan {
-  @include column(12);
-  margin-bottom: $baseline-unit*4;
+@include respond-to(0, $mq-m) {
+  .l-action-plan,
+  .l-nav {
+    @include column(12);
+  }
 
-  @include respond-to($mq-l) {
-    @include column(8);
+  .l-action-plan {
     margin-bottom: $baseline-unit*4;
   }
+}
+
+@include respond-to($mq-m) {
+  .l-action-plan {
+    @include column(9);
+    float:right;
+  }
+
+  .l-nav {
+    @include column(3);
+    float:left;
+    margin-top:3em;
+  }
+}
+
+@include respond-to($mq-l) {
+  .l-action-plan {
+    @include column(7);
+    @include pull(2);
+    float:right;
+    margin-bottom: $baseline-unit*4;
+  }
+}
+
+//temporary -  hides sublist in hardcoded nav
+.l-action-plan + .l-nav .nav__sub-list {
+  display:none;
 }

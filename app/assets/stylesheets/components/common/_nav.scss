@@ -1,0 +1,28 @@
+.nav__back-to-top {
+  display:block;
+  background:#edf0f1;
+}
+
+.nav__list {
+  @extend .unstyled-list;
+
+  li  li {
+    padding-left:26px;
+
+    a {
+      color:#308334;
+    }
+  }
+
+  li  li.is-selected {
+    background:#edf0f1;
+  }
+}
+
+.nav__item {
+  border-top: 1px solid $color-grey-light;
+
+  &:last-child {
+    border-bottom: 1px solid $color-grey-light;
+  }
+}

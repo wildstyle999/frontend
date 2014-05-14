@@ -1,14 +1,4 @@
 .l-search-results {
-  @include column(12);
-
-  @include respond-to($mq-m) {
-    @include column(9);
-  }
-
-  @include respond-to($mq-l) {
-    @include column(7);
-  }
-
   .search-box {
     margin-bottom: $baseline-unit*2;
   }
@@ -20,4 +10,42 @@
   .pagination {
     margin: $baseline-unit*8 0 $baseline-unit*6 0;
   }
+}
+
+@include respond-to(0, $mq-m) {
+  .l-search-results,
+  .l-nav {
+    @include column(12);
+  }
+
+  .l-action-plan {
+    margin-bottom: $baseline-unit*4;
+  }
+}
+
+@include respond-to($mq-m) {
+  .l-search-results {
+    @include column(9);
+    float:right;
+  }
+
+  .l-nav {
+    @include column(3);
+    float:left;
+    margin-top:3em;
+  }
+}
+
+@include respond-to($mq-l) {
+  .l-search-results {
+    @include column(7);
+    @include pull(2);
+    float:right;
+    margin-bottom: $baseline-unit*4;
+  }
+}
+
+//temporary -  hides sublist in hardcoded nav
+.l-search-results + .l-nav .nav__sub-list {
+  display:none;
 }

@@ -4,8 +4,12 @@
   <%= render 'shared/header' %>
   <div class="l-constrained l-padded">
     <%= yield %>
+    <div class="l-nav">
+      <%= render 'styleguide/shared/nav' %>
+    </div>
   </div>
   <%= render 'shared/footer' %>
+
 <% end %>
 
 <%= render template: 'layouts/styleguide' %>
