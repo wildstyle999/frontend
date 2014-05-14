@@ -46,14 +46,14 @@ require(['common'], function(MAS) {
 //      });
 
       // Mobile Nav
-//      new Collapsable({
-//        name: 'mobileNav',
-//        closeOffFocus: false,
-//        accordion: true,
-//        triggerEl: '.mobile-nav a',
-//        targetType: 'href',
-//        parentWrapper: '#primary-nav'
-//      });
+      new Collapsable({
+        name: 'mobileNav',
+        closeOffFocus: false,
+        accordion: true,
+        triggerEl: '.mobile-nav__link--search',
+        targetType: 'href',
+        parentWrapper: '#primary-nav'
+      });
 
       // Article Collapsables
       new Collapsable({
