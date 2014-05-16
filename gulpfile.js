@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
+    cssmin = require('gulp-cssmin'),
     prefix = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
     pngcrush = require('imagemin-pngcrush'),
@@ -30,7 +31,7 @@ var paths = {
         cacheLocation: './tmp/cache/sass',
         loadPath: './vendor/assets/bower_components',
         require: 'sass-globbing',
-        style: 'compressed',
+        style: 'expanded',
         unixNewlines: true
       }
     };
@@ -55,6 +56,9 @@ gulp.task('stylesheets', function() {
     .pipe(sass(options.sass))
     .pipe(prefix())
     .pipe(rename({ extname: '' }))
+    .pipe(gulp.dest(options.dest))
+    .pipe(cssmin())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(options.dest))
     .pipe(rev())
     .pipe(gulp.dest(options.dest))
