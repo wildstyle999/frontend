@@ -1,6 +1,8 @@
 {
   "devDependencies": {
     "gulp": "^3.6.2",
-    "gulp-ruby-sass": "^0.5.0"
+    "gulp-ruby-sass": "^0.5.0",
+    "gulp-imagemin": "^0.5.0",
+    "imagemin-pngcrush": "^0.1.0"
   }
 }
