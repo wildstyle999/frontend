@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
+    prefix = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
     pngcrush = require('imagemin-pngcrush'),
     rev = require('gulp-rev'),
@@ -52,6 +53,7 @@ gulp.task('stylesheets', function() {
 
   return gulp.src(paths.stylesheets)
     .pipe(sass(options.sass))
+    .pipe(prefix())
     .pipe(rename({ extname: '' }))
     .pipe(gulp.dest(options.dest))
     .pipe(rev())

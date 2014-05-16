@@ -59,8 +59,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
-    autoprefixer-rails (1.1.20140410)
-      execjs
     builder (3.2.2)
     byebug (2.7.0)
       columnize (~> 0.3)
@@ -370,7 +368,6 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-session_store
-  autoprefixer-rails
   byebug
   chai-jquery-rails
   codeclimate-test-reporter
