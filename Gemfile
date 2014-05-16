@@ -44,6 +44,7 @@ group :development do
   gem 'guard-sass'
   gem 'guard-shell'
   gem 'listen', '~> 2.0'
+  gem 'sass-globbing'
   gem 'spring-commands-cucumber'
   gem 'spring-commands-rspec'
 end
