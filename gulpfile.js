@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     imagemin = require('gulp-imagemin'),
-    pngcrush = require('imagemin-pngcrush');
+    pngcrush = require('imagemin-pngcrush'),
+    rev = require('gulp-rev'),
+    rename = require('gulp-rename');
 
 var paths = {
       images: [
@@ -37,6 +39,11 @@ gulp.task('images', function() {
 
   return gulp.src(paths.images)
     .pipe(imagemin(options.imagemin))
+    .pipe(gulp.dest(options.dest))
+    .pipe(rev())
+    .pipe(gulp.dest(options.dest))
+    .pipe(rev.manifest())
+    .pipe(rename({ suffix: '-images' }))
     .pipe(gulp.dest(options.dest));
 });
 
@@ -45,6 +52,12 @@ gulp.task('stylesheets', function() {
 
   return gulp.src(paths.stylesheets)
     .pipe(sass(options.sass))
+    .pipe(rename({ extname: '' }))
+    .pipe(gulp.dest(options.dest))
+    .pipe(rev())
+    .pipe(gulp.dest(options.dest))
+    .pipe(rev.manifest())
+    .pipe(rename({ suffix: '-stylesheets' }))
     .pipe(gulp.dest(options.dest));
 });
 
