@@ -6,13 +6,22 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngcrush = require('imagemin-pngcrush'),
     rev = require('gulp-rev'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    rjs = require('gulp-requirejs'),
+    bower = require('gulp-bower-files'),
+    filter = require('gulp-filter'),
+    uglify = require('gulp-uglify');
 
 var paths = {
       images: [
         './app/assets/images/**/*',
         './lib/assets/images/**/*',
         './vendor/assets/images/**/*'
+      ],
+      javascripts: [
+        './app/assets/javascripts/**/*.js',
+        './lib/assets/javascripts/**/*.js',
+        './vendor/assets/javascripts/**/*.js'
       ],
       stylesheets: [
         './app/assets/stylesheets/**/*.scss',
@@ -30,6 +39,32 @@ var paths = {
       },
       prefix: {
         cascade: true
+      },
+      rjs: {
+        baseUrl: './public/a',
+        name: 'application',
+        out: 'application.min.js',
+        paths: {
+          collapsable: 'modules/mas_collapsable',
+          common: 'modules/common',
+          cy: 'translations/cy',
+          globals: 'modules/globals',
+          i18n: 'modules/i18n',
+          i18nTokens: 'translations/en',
+          jquery: 'jquery/dist/jquery',
+          log: 'modules/log',
+          MASModule: 'lib/MASModule',
+          MicroEvent: 'lib/MicroEvent',
+          pubsub: 'modules/mas_pubsub',
+          scrollTracking: 'modules/mas_scrollTracking',
+          Toggler: 'components/Toggler',
+          translations: 'translations/en',
+          ujs: 'jquery-ujs/src/rails',
+          waypoints: 'jquery-waypoints/waypoints'
+        },
+        shim: {
+          'ujs': ['jquery']
+        }
       },
       sass: {
         bundleExec: true,
@@ -52,6 +87,22 @@ gulp.task('images', function() {
     .pipe(rev())
     .pipe(gulp.dest(dest))
     .pipe(rev.manifest())
+    .pipe(gulp.dest(dest));
+});
+
+gulp.task('javascripts', function() {
+  'use strict';
+
+  var dest = options.dest + '/javascripts';
+
+  gulp.src(paths.javascripts)
+    .pipe(gulp.dest(dest))
+    .pipe(bower())
+    .pipe(filter('**/*.js', '!**/*.min.js'))
+    .pipe(gulp.dest(dest));
+
+  return rjs(options.rjs)
+    .pipe(uglify())
     .pipe(gulp.dest(dest));
 });
 
