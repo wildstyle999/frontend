@@ -39,32 +39,34 @@ var paths = {
 gulp.task('images', function() {
   'use strict';
 
+  var dest = options.dest + '/images';
+
   return gulp.src(paths.images)
     .pipe(imagemin(options.imagemin))
-    .pipe(gulp.dest(options.dest))
+    .pipe(gulp.dest(dest))
     .pipe(rev())
-    .pipe(gulp.dest(options.dest))
+    .pipe(gulp.dest(dest))
     .pipe(rev.manifest())
-    .pipe(rename({ suffix: '-images' }))
-    .pipe(gulp.dest(options.dest));
+    .pipe(gulp.dest(dest));
 });
 
 gulp.task('stylesheets', function() {
   'use strict';
 
+  var dest = options.dest + '/stylesheets';
+
   return gulp.src(paths.stylesheets)
     .pipe(sass(options.sass))
     .pipe(prefix())
     .pipe(rename({ extname: '' }))
-    .pipe(gulp.dest(options.dest))
+    .pipe(gulp.dest(dest))
     .pipe(cssmin())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(options.dest))
+    .pipe(gulp.dest(dest))
     .pipe(rev())
-    .pipe(gulp.dest(options.dest))
+    .pipe(gulp.dest(dest))
     .pipe(rev.manifest())
-    .pipe(rename({ suffix: '-stylesheets' }))
-    .pipe(gulp.dest(options.dest));
+    .pipe(gulp.dest(dest));
 });
 
 gulp.task('default', ['images', 'stylesheets']);
