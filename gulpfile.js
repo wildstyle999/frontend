@@ -109,6 +109,10 @@ gulp.task('javascripts', ['prep-javascripts'], function() {
 
   return rjs(options.rjs)
     .pipe(uglify())
+    .pipe(gulp.dest(dest))
+    .pipe(rev())
+    .pipe(gulp.dest(dest))
+    .pipe(rev.manifest())
     .pipe(gulp.dest(dest));
 });
 
