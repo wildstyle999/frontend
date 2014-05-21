@@ -41,7 +41,7 @@ var paths = {
         cascade: true
       },
       rjs: {
-        baseUrl: './public/a/javascripts',
+        baseUrl: './tmp/javascripts',
         name: 'application',
         out: 'application.min.js',
         paths: {
@@ -93,7 +93,7 @@ gulp.task('images', function() {
 gulp.task('prep-javascripts', function() {
   'use strict';
 
-  var dest = options.dest + '/javascripts';
+  var dest = './tmp/javascripts';
 
   return gulp.src(paths.javascripts)
     .pipe(gulp.dest(dest))
