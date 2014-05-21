@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
+    csslint = require('gulp-csslint'),
     cssmin = require('gulp-cssmin'),
     prefix = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
@@ -21,10 +22,14 @@ var paths = {
     },
     options = {
       dest: './public/a',
+      csslint: '.csslint',
       imagemin: {
         interlaced: true,
         progressive: true,
         use: [pngcrush()]
+      },
+      prefix: {
+        cascade: true
       },
       sass: {
         bundleExec: true,
@@ -57,7 +62,8 @@ gulp.task('stylesheets', function() {
 
   return gulp.src(paths.stylesheets)
     .pipe(sass(options.sass))
-    .pipe(prefix())
+    .pipe(prefix(options.prefix))
+    .pipe(csslint(options.csslint))
     .pipe(rename({ extname: '' }))
     .pipe(gulp.dest(dest))
     .pipe(cssmin())
