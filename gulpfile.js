@@ -41,7 +41,7 @@ var paths = {
         cascade: true
       },
       rjs: {
-        baseUrl: './public/a',
+        baseUrl: './public/a/javascripts',
         name: 'application',
         out: 'application.min.js',
         paths: {
@@ -90,16 +90,22 @@ gulp.task('images', function() {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('javascripts', function() {
+gulp.task('prep-javascripts', function() {
   'use strict';
 
   var dest = options.dest + '/javascripts';
 
-  gulp.src(paths.javascripts)
+  return gulp.src(paths.javascripts)
     .pipe(gulp.dest(dest))
     .pipe(bower())
     .pipe(filter('**/*.js', '!**/*.min.js'))
     .pipe(gulp.dest(dest));
+});
+
+gulp.task('javascripts', ['prep-javascripts'], function() {
+  'use strict';
+
+  var dest = options.dest + '/javascripts';
 
   return rjs(options.rjs)
     .pipe(uglify())
