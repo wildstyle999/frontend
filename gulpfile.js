@@ -1,15 +1,15 @@
-var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+var bower = require('gulp-bower-files'),
     csslint = require('gulp-csslint'),
     cssmin = require('gulp-cssmin'),
-    prefix = require('gulp-autoprefixer'),
+    filter = require('gulp-filter'),
+    gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngcrush = require('imagemin-pngcrush'),
-    rev = require('gulp-rev'),
+    prefix = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
+    rev = require('gulp-rev'),
     rjs = require('gulp-requirejs'),
-    bower = require('gulp-bower-files'),
-    filter = require('gulp-filter'),
+    sass = require('gulp-ruby-sass'),
     uglify = require('gulp-uglify');
 
 var paths = {
