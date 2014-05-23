@@ -38,6 +38,10 @@ class ArticleDecorator < Draper::Decorator
     end
   end
 
+  def uniq_parent?
+    parent_categories.size == 1
+  end
+
   private
 
   def processed_body
