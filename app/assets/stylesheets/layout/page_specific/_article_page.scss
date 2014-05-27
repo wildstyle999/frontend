@@ -1,16 +1,35 @@
+.l-category-nav-container {
+  position: relative;
+}
+
 .l-category-nav {
   @include respond-to($mq-l) {
     @include column(3);
-    margin-top: $baseline-unit*10;
+    position: absolute;
+    top: 120px;
+    left: 0;
+  }
+}
+
+.l-category-nav--top {
+  & .link-list-primary__link--back-to-top {
+    display: none;
+  }
+}
+
+.l-category-nav--bottom {
+  @include respond-to($mq-m) {
+    display: none;
   }
 }
 
 .l-article {
-//  overflow: hidden;
+  //  overflow: hidden;
   margin-bottom: $baseline-unit*4;
 
   @include respond-to($mq-l) {
     @include column(7);
+    @include push(3);
     margin-bottom: $baseline-unit*4;
   }
 }
@@ -19,16 +38,12 @@
   display: none;
 
   @include respond-to($mq-l) {
-    @include column(6);
+    @include column(5);
     float: right;
-    margin-right: -200px;
+    margin-right: -180px;
     margin-left: 30px;
   }
 }
-
-
-
-
 
 //
 //
