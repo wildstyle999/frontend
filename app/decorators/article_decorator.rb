@@ -26,11 +26,11 @@ class ArticleDecorator < Draper::Decorator
   end
 
   def parent_categories
-    @parent_categories ||= CategoryDecorator.decorate_collection(object.categories)
+    @parent_categories ||= CategoryDecorator.decorate_collection(categories)
   end
 
   def related_categories
-    @related_categories ||= object.categories.each_with_object([]) do |category, obj|
+    @related_categories ||= categories.each_with_object([]) do |category, obj|
       # Remove the article from the category's contents collection
       category.contents.reject! { |a| a == object }
       # Now only include the category if there are still contents
@@ -39,6 +39,10 @@ class ArticleDecorator < Draper::Decorator
   end
 
   private
+
+  def categories
+    object.categories.compact
+  end
 
   def processed_body
     body = object.body
