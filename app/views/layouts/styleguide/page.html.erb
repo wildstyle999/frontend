@@ -3,6 +3,12 @@
   <%= render 'shared/opt_out_bar' %>
   <%= render 'shared/header' %>
 
+  <div class="l-constrained l-category-nav-container">
+    <nav role="navigation" class="l-category-nav l-category-nav--top">
+      <%= render 'shared/category_nav' %>
+    </nav>
+  </div>
+
   <% if content_for?(:context_bar) %>
     <nav class="l-context-bar">
       <div class="l-constrained">
@@ -14,6 +20,13 @@
   <div class="l-constrained l-padded">
     <%= yield %>
   </div>
+
+  <div class="l-constrained">
+    <nav role="navigation" class="l-category-nav l-category-nav--bottom">
+      <%= render 'shared/category_nav' %>
+    </nav>
+  </div>
+
   <%= render 'shared/contact' %>
   <%= render 'shared/footer' %>
 <% end %>
