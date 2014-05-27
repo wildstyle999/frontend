@@ -9,6 +9,10 @@
 .link-list-primary__item {
   @extend .unstyled-list;
   border-bottom: 1px solid $color-link-list-primary-border-color;
+
+  &:first-child {
+    border: 0;
+  }
 }
 
 .link-list-primary__link {
@@ -16,7 +20,13 @@
   display: block;
 }
 
+.link-list-primary__link--back-to-top {
+  @extend %font-heading-heavy;
+  background-color: $color-link-list-back-to-top;
+}
+
 // ----------- state --------------
 .link-list-primary__link.is-selected {
   background-color: $color-link-list-background;
 }
+
