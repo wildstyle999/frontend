@@ -8,7 +8,7 @@
 
 .link-list-primary__item {
   @extend .unstyled-list;
-  border-top: 1px solid $color-link-list-primary-border-color;
+  border-bottom: 1px solid $color-link-list-primary-border-color;
 }
 
 .link-list-primary__link {
@@ -16,8 +16,7 @@
   display: block;
 }
 
-
 // ----------- state --------------
-.link-list-primary__item.is-selected {
-  background: $color-link-list-background;
+.link-list-primary__link.is-selected {
+  background-color: $color-link-list-background;
 }
