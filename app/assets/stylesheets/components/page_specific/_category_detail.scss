@@ -79,10 +79,3 @@
     }
   }
 }
-
-.link-to-top {
-  @extend %type-small;
-  display: block;
-  text-align: right;
-  margin-top: $baseline-unit*4;
-}

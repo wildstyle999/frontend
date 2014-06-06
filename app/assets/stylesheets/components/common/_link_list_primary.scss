@@ -17,16 +17,6 @@
   display: block;
 }
 
-.link-list-primary__item--back-to-top {
-  @extend %font-heading-heavy;
-  background-color: $color-link-list-background;
-
-  .icon {
-    float: right;
-    margin-top: 6px;
-  }
-}
-
 // ----------- state --------------
 .link-list-primary__link.is-selected {
   background: $color-link-list-background;
