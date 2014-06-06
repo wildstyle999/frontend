@@ -11,12 +11,12 @@
         "import",
         "ids",
         "underscore-property-hack",
-        "shorthand",
         "text-indent",
         "vendor-prefix",
         "zero-units"
     ],
     "warnings": [
+        "shorthand",
         "overqualified-elements",
         "display-property-grouping",
         "duplicate-background-images",
