@@ -136,4 +136,4 @@ gulp.task('stylesheets', function() {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('default', ['images', 'stylesheets']);
+gulp.task('default', ['images', 'stylesheets', 'javascripts']);
