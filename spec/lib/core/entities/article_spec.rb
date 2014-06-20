@@ -1,7 +1,10 @@
+require 'core/contracts/entity'
 require 'core/entities/article'
 
 module Core
   RSpec.describe Article do
+    it { is_expected.to implement(Core::Contracts::Entity) }
+
     subject { described_class.new(double, attributes) }
 
     let(:categories) { [] }
@@ -81,9 +84,9 @@ module Core
     describe '#parent_category_ids' do
       let(:parent_category_1_id) { 'parent-category-1' }
       let(:parent_category_2_id) { 'parent-category-2' }
-      let(:category_1) { double(parent_id: parent_category_1_id ) }
-      let(:category_2) { double(parent_id: parent_category_1_id ) }
-      let(:category_3) { double(parent_id: parent_category_2_id ) }
+      let(:category_1) { double(parent_id: parent_category_1_id) }
+      let(:category_2) { double(parent_id: parent_category_1_id) }
+      let(:category_3) { double(parent_id: parent_category_2_id) }
       let(:categories) { [] }
 
       before do
