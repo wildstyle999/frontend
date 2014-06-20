@@ -14,6 +14,7 @@ require 'mas/development_dependencies/rspec/spec_helper'
 require 'core/repositories/vcr'
 require 'factory_girl'
 require 'html_validation'
+require 'lawyer/rspec'
 require 'webmock/rspec'
 
 Draper::ViewContext.test_strategy :fast

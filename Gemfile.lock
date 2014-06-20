@@ -205,6 +205,7 @@ GEM
     kss (0.5.0)
     launchy (2.4.2)
       addressable (~> 2.3)
+    lawyer (0.0.13)
     link_header (0.0.8)
     listen (2.7.8)
       celluloid (>= 0.15.2)
@@ -402,6 +403,7 @@ DEPENDENCIES
   jshint_ruby
   konacha
   kss
+  lawyer
   link_header
   listen (~> 2.0)
   mas-development_dependencies!
