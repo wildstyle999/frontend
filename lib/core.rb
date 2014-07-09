@@ -42,6 +42,7 @@ module Core
     module Articles
       autoload :Fake, 'core/repository/articles/fake'
       autoload :PublicWebsite, 'core/repository/articles/public_website'
+      autoload :Cms,           'core/repository/articles/cms'
     end
 
     module Categories
