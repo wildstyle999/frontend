@@ -42,12 +42,17 @@ module Core
     module Articles
       autoload :Fake, 'core/repository/articles/fake'
       autoload :PublicWebsite, 'core/repository/articles/public_website'
-      autoload :Cms,           'core/repository/articles/cms'
+
     end
 
     module Categories
       autoload :Fake, 'core/repository/categories/fake'
       autoload :PublicWebsite, 'core/repository/categories/public_website'
+    end
+
+    module Cms
+      autoload :Cms,           'core/repository/cms/cms'
+      autoload :BlockComposer, 'core/repository/cms/block_composer'
     end
 
     module News
