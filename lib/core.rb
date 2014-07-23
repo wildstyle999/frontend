@@ -50,8 +50,8 @@ module Core
       autoload :PublicWebsite, 'core/repository/categories/public_website'
     end
 
-    module Cms
-      autoload :Cms,           'core/repository/cms/cms'
+    module CMS
+      autoload :CMS,           'core/repository/cms/cms'
       autoload :BlockComposer, 'core/repository/cms/block_composer'
     end
 
