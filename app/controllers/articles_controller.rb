@@ -18,4 +18,10 @@ class ArticlesController < ApplicationController
       active_category category.parent_id if category.child?
     end
   end
+
+  def preview
+    @article = Core::ArticlePreviewer.new(params[:id]).call do
+      not_found
+    end
+  end
 end
