@@ -38,5 +38,5 @@ Core::Registry::Repository[:news] =
 Core::Registry::Repository[:newsletter_subscription] =
   Core::Repository::NewsletterSubscriptions::PublicWebsite.new
 
-# Core::Registry::Repository[:preview] =
-#   Core::Repository::CMS::Preview.new
+Core::Registry::Repository[:preview] =
+  Core::Repository::CMS::Preview.new
