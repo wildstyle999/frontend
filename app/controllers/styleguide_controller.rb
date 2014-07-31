@@ -113,6 +113,10 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def css_form_demo
+    render layout: 'styleguide/documentation'
+  end
+
   private
 
   def article

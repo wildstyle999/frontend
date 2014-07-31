@@ -106,6 +106,7 @@ Rails.application.routes.draw do
           get 'css_basic', path: '/typography'
           get 'css_article_demo', path: '/article-demo'
           get 'css_default_styles', path: '/default-styles'
+          get 'css_form_demo', path: '/form-demo'
         end
 
       end
