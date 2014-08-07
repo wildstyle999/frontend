@@ -39,7 +39,7 @@ Rails.application.routes.draw do
     resources :articles,
               only: 'show',
               constraints: ValidResource.new(:article) do
-      get 'preview', on: :member
+      get 'preview', on: :member, to: 'articles_preview#show'
     end
 
     resources :categories, only: 'show',
