@@ -5,6 +5,58 @@
 
 <h1 class="visually-hidden"><%= t('layouts.base.title') %></h1>
 
+<div class="webchat" id="js-webchat">
+  <p>Get free, impartial advice online in an instant from out qualified team</p>
+
+
+  <style>
+    .js .webchat__enable-js {
+      display:none;
+    }
+  </style>
+  <p class="webchat__enable-js">To use web chat you will need to <a href="http://www.enable-javascript.com/">enable javascript</a></p>
+
+</div>
+
 <%= render 'shared/trust_banner' %>
 <%= render 'shared/directory', items: category_navigation %>
 <%= render 'shared/promos', items: t('.promoted') %>
+
+<!-- Webchat -->
+<script type='text/javascript' src='https://webchat.moneyadviceservice.org.uk/include.js?domain=www.moneyadviceservice.org.uk'></script>
+<script type='text/javascript'>
+  sWOProtocol = 'https:';
+  var isChatElementPresent = 0;
+
+  function overrideLoad()
+  {
+    if (sWOImage.width !== 1)
+    {
+      // online code
+      if (isChatElementPresent == 0 ) {
+        var sWOChatElement = document.createElement('a');
+        var sWOChatElementText = document.createTextNode("Launch Chat!");
+        sWOChatElement.className = "button";
+        sWOChatElement.appendChild(sWOChatElementText);
+        document.getElementById('js-webchat').appendChild(sWOChatElement);
+        sWOChatElement.onclick= function() {
+          window.open(sWOChatElement.href,"Chat","width=484,height=361,scrollbars=yes,resizable=yes");
+          return false;
+        }
+        sWOChatElement.href=sWOChatstart;
+        sWOChatElement.target = "_blank";
+        isChatElementPresent = 1;
+      }
+    }
+  }
+  sWOImageLoaded=overrideLoad;
+
+  if (document.getElementById('js-webchat') !== null) {
+    if (typeof sWOTrackPage == 'function') {
+      sWOTrackPage();
+    }
+    var t = setTimeout("sWOInvite='';sWOResponse='N';sWOPage=(sWOPage || '')+'%3Ftimer%3Dtrue';sWOTrackPage();", 30000); // Pro-active engage webchat timer in ms
+  }
+
+</script>
+<!-- End Webchat -->
