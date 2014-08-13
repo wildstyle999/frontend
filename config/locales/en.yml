@@ -86,15 +86,18 @@ en:
       available:
         button: Launch chat
         description: Got a question? Our advisors will point you in the right direction.
+      unavailable:
+        button: Unavailable
       busy:
         button: Currently busy
         description: Sorry, all of our advisors are currently busy. Please try again later.
-      unavailable:
-        button: Unavailable
-        description: Sorry, web chat is only available on internet browsers with JavaScript.
+      javascript:
+        description_html: |
+          Sorry, web chat is only available on
+          <a href="http://www.enable-javascript.com/">internet browsers with JavaScript</a>.
       offline:
         button: Offline
-        description: Web chat is available from
+        description: Please try again later.
       coming_soon:
         description_html: Coming soon.
       opening_times_html: |
