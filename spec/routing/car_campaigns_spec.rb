@@ -12,4 +12,8 @@ RSpec.describe 'Car campaigns routing', :type => :routing do
         to route_to(controller: 'car_campaigns', action: 'show', locale: 'cy', id: 'revealed-the-true-cost-of-buying-a-car')
     end
   end
+
+  context 'when the id is not whitelisted' do
+    specify { expect(get("/cy/campaigns/ramdom-id")).to_not be_routable }
+  end
 end
