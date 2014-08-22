@@ -1,5 +1,3 @@
-<% set_meta_tags(title: t(".title")) %>
-
 <div class="l-car-campaign-page-bg"></div>
 
 <div class="l-car-campaign editorial">
@@ -8,31 +6,28 @@
   <div class="l-car-campaign__section l-car-campaign__section--intro">
     <div class="l-car-campaign__section-text">
       <header>
-        <%= heading_tag t(".title") %>
-        <p class="intro"><%= t(".intro_html") %></p>
+        <%= heading_tag car_campaign.title %>
+        <p class="intro"><%= car_campaign.intro_html %></p>
       </header>
     </div>
 
-    <% if local_assigns.fetch(:show_car_costs_calculator_cta) { true } %>
-      <%= link_to t(".car_costs_calculator_button_content"), tool_path(t(".car_costs_calculator")),
-                  class: "button button--primary" %>
-    <% end %>
+    <%= car_campaign.call_to_action %>
 
   </div>
 
   <div class="l-car-campaign__section l-car-campaign__section--buy">
     <div class="l-car-campaign__section-row">
-      <%= heading_tag t(".how_buy.title"), level: 2, class: 'l-car-campaign__section-heading' %>
+      <%= heading_tag car_campaign.title('how_buy'), level: 2, class: 'l-car-campaign__section-heading' %>
 
       <div class="l-car-campaign__section-text">
-        <p><%= t(".how_buy.intro") %></p>
+        <p><%= car_campaign.intro('how_buy') %></p>
       </div>
 
       <div class="l-car-campaign__section-media"></div>
 
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
-          <% t(".how_buy.articles").each do |article| %>
+          <% car_campaign.articles('how_buy').each do |article| %>
             <li>
               <%= link_to article[:text], article_path(article[:id]) %>
             </li>
@@ -47,15 +42,15 @@
   <div class="l-car-campaign__section l-car-campaign__section--run">
     <div class="l-car-campaign__section-row">
       <div class="l-car-campaign__section-text">
-        <%= heading_tag t(".running.title"), level: 2 %>
-        <p><%= t(".running.intro") %></p>
+        <%= heading_tag car_campaign.title('running'), level: 2 %>
+        <p><%= car_campaign.intro('running') %></p>
       </div>
 
       <div class="l-car-campaign__section-media"></div>
 
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
-          <% t(".running.articles").each do |article| %>
+          <%  car_campaign.articles('running').each do |article| %>
             <li>
               <%= link_to article[:text], article_path(article[:id]) %>
             </li>
@@ -68,15 +63,15 @@
   <div class="l-car-campaign__section l-car-campaign__section--sell">
     <div class="l-car-campaign__section-row">
       <div class="l-car-campaign__section-text">
-        <%= heading_tag t(".sell.title"), level: 2 %>
-        <p><%= t(".sell.intro") %></p>
+        <%= heading_tag  car_campaign.title('sell'), level: 2 %>
+        <p><%= car_campaign.intro('sell') %></p>
       </div>
 
       <div class="l-car-campaign__section-media"></div>
 
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
-          <% t(".sell.articles").each do |article| %>
+          <%  car_campaign.articles('sell').each do |article| %>
             <li>
               <%= link_to article[:text], article_path(article[:id]) %>
             </li>

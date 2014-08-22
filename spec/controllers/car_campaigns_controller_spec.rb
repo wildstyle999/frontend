@@ -1,5 +1,6 @@
 RSpec.describe CarCampaignsController, :type => :controller do
   describe 'GET show' do
+    before { allow(CarCampaign).to receive(:new) { double } }
     context 'when id is whitelisted' do
       let(:whitelisted_id) { 'revealed-the-true-cost-of-buying-a-car' }
 

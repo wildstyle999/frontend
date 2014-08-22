@@ -1,5 +1,6 @@
 class CarCampaignsController < ApplicationController
   def show
+    @car_campaign = CarCampaign.new(params[:id])
     render :show
   end
 
