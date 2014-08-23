@@ -7,12 +7,10 @@
     <div class="l-car-campaign__section-text">
       <header>
         <%= heading_tag car_campaign.title %>
-        <p class="intro"><%= car_campaign.intro_html %></p>
+        <%= car_campaign.intro_html %>
       </header>
     </div>
-
     <%= car_campaign.call_to_action %>
-
   </div>
 
   <div class="l-car-campaign__section l-car-campaign__section--buy">
@@ -28,9 +26,9 @@
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
           <% car_campaign.articles('how_buy').each do |article| %>
-            <li>
-              <%= link_to article[:text], article_path(article[:id]) %>
-            </li>
+          <li>
+            <%= link_to article[:text], article_path(article[:id]) %>
+          </li>
           <% end %>
         </ul>
       </div>
@@ -51,9 +49,9 @@
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
           <%  car_campaign.articles('running').each do |article| %>
-            <li>
-              <%= link_to article[:text], article_path(article[:id]) %>
-            </li>
+          <li>
+            <%= link_to article[:text], article_path(article[:id]) %>
+          </li>
           <% end %>
         </ul>
       </div>
@@ -72,9 +70,9 @@
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
           <%  car_campaign.articles('sell').each do |article| %>
-            <li>
-              <%= link_to article[:text], article_path(article[:id]) %>
-            </li>
+          <li>
+            <%= link_to article[:text], article_path(article[:id]) %>
+          </li>
           <% end %>
         </ul>
       </div>

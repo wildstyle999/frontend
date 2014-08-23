@@ -31,8 +31,7 @@ class CarCampaign
   def call_to_action
     button_text = I18n.t("car_campaigns.#{id}.car_costs_calculator_button_content")
     ActionController::Base.helpers.link_to(
-      button_text, tool_path(id: 'car-costs-calculator', locale: I18n.locale), class: "button button--primary"
-    )
+      button_text, tool_path(id: 'car-costs-calculator', locale: I18n.locale), class: "button button--primary")
   end
 
   def canonical_url
