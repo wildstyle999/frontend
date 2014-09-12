@@ -1,0 +1,7 @@
+hr {
+  border-bottom: 1px solid $color-grey-pale;
+}
+
+.hr--inset {
+  @include column(12);
+}
