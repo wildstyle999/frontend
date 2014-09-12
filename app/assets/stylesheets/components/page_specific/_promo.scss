@@ -9,9 +9,8 @@
 
 .promo__heading {
   @extend %font-heading-medium;
-  @include body(24, 30);
+  @include body(22, 30);
   display: block;
-  margin-bottom: $baseline-unit;
   margin-top: 0;
 
   &:hover {
@@ -25,7 +24,11 @@
   }
 }
 
+.promo__heading-text {
+  margin-bottom: $baseline-unit;
+}
+
 .promo__content,
-.promo__heading {
+.promo__heading-text {
   @include column(12);
 }
