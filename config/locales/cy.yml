@@ -161,6 +161,23 @@ cy:
           text: Ble i gael cyngor am ddim ynghylch dyled
           image: free-debt-advice.jpg
           content: Cewch wybod ble i gael cymorth cyfrinachol am ddim os ydych yn cael trafferthion â dyled.
+      tools:
+        - url:
+          heading: Budget planner
+          icon: icon--home
+          text: How much spending money do you have after you've paid your most important bills? Work it out now.
+        - url:
+          heading: Health check
+          icon: icon--home
+          text: Get a clear picture of where you stand with your finances. Receive free and unbiased advice.
+        - url:
+          heading: Savings calculator
+          icon: icon--home
+          text: Are you saving for a future bill? A new TV or car? Or just to have a bit in the bank? Our savings calculator can help.
+        - url:
+          heading: Pensions calculator
+          icon: icon--home
+          text: Work out how much retirement income you might receive from saving in a personal, stakeholder or group pension.
 
   opt_out:
     title: Edrychwch ar hyn ar ein gwefan flaenorol

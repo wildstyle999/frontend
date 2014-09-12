@@ -159,6 +159,23 @@ en:
           text: Where to go to get free debt advice
           image: free-debt-advice.jpg
           content: Find out where you can get free, confidential help if you are struggling with debt.
+      tools:
+        - url:
+          heading: Budget planner
+          icon: icon--home
+          text: How much spending money do you have after you've paid your most important bills? Work it out now.
+        - url:
+          heading: Health check
+          icon: icon--home
+          text: Get a clear picture of where you stand with your finances. Receive free and unbiased advice.
+        - url:
+          heading: Savings calculator
+          icon: icon--home
+          text: Are you saving for a future bill? A new TV or car? Or just to have a bit in the bank? Our savings calculator can help.
+        - url:
+          heading: Pensions calculator
+          icon: icon--home
+          text: Work out how much retirement income you might receive from saving in a personal, stakeholder or group pension.
 
   opt_out:
     title: View on our previous website
