@@ -1,17 +1,21 @@
 <%= render 'shared/trust_banner' %>
 
-<% if params.key?('welsh') %>
-  <div class="theme-cy">
-    <div class="temp-dynamic-directory-container">
-      <%= render 'shared/directory',
-                 items: @categories_for_directory_cy %>
+<div class="l-home-directory">
+  <div class="l-constrained">
+    <% if params.key?('welsh') %>
+    <div class="theme-cy">
+      <div class="temp-dynamic-directory-container">
+        <%= render 'shared/directory', items: @categories_for_directory_cy %>
+      </div>
     </div>
+    <% else %>
+    <div class="temp-dynamic-directory-container">
+      <%= render 'shared/directory', items: categories_for_directory_en %>
+    </div>
+    <% end %>
   </div>
-<% else %>
-  <div class="temp-dynamic-directory-container">
-    <%= render 'shared/directory',
-               items: categories_for_directory_en %>
-  </div>
-<% end %>
+</div>
+
+<%= render 'shared/tool_panels', items: t('home.show.tools') %>
 
 <%= render 'shared/promos', items: t('home.show.promoted') %>
