@@ -17,7 +17,6 @@
 
 .l-tool-panel {
   @include column(12);
-  margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit*3;
 
   @include respond-to($mq-s) {
@@ -36,6 +35,11 @@
   & a:visited {
     @include body(22, 30);
     @extend %font-heading-medium;
+  }
+
+  .icon {
+    position: relative;
+    top: 6px;
   }
 }
 

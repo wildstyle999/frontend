@@ -137,7 +137,7 @@ en:
   home:
     show:
       title: Free, impartial & set up by government
-      heading: Free, impartial & set up by government
+      heading: Free & impartial money advice, set up by government
       strapline: Free, impartial & set up by government
       description: >
         The Money Advice Service helps you manage your money better. Use our Health Check tool,
@@ -162,19 +162,19 @@ en:
       tools:
         - url:
           heading: Budget planner
-          icon: icon--home
+          icon: icon--tool
           text: How much spending money do you have after you've paid your most important bills? Work it out now.
         - url:
           heading: Health check
-          icon: icon--home
+          icon: icon--tool
           text: Get a clear picture of where you stand with your finances. Receive free and unbiased advice.
         - url:
           heading: Savings calculator
-          icon: icon--home
+          icon: icon--calc
           text: Are you saving for a future bill? A new TV or car? Or just to have a bit in the bank? Our savings calculator can help.
         - url:
           heading: Pensions calculator
-          icon: icon--home
+          icon: icon--calc
           text: Work out how much retirement income you might receive from saving in a personal, stakeholder or group pension.
 
   opt_out:
