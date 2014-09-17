@@ -6,12 +6,6 @@
   @extend .clearfix;
   width:100%;
   background-color: $color-directory-emphasized-bg;
-  padding-top: $baseline-unit*4;
-  padding-bottom: $baseline-unit*2;
-
-  @include respond-to($mq-m) {
-    padding-top: $baseline-unit*7;
-  }
 
   .flexbox & {
     /* @lintingIgnoreBegin */
@@ -29,9 +23,11 @@
 
 .directory__item {
   @include column(12);
+  border-top: 1px solid $color-white;
 
   @include respond-to($mq-m) {
     @include column(6);
+    border-top: 0;
     min-height: 133px;
   }
 
@@ -43,6 +39,28 @@
 
   @include respond-to($mq-xl) {
     min-height: 128px;
+  }
+
+  .icon {
+    float: left;
+    margin-right: $baseline-unit*2;
+    margin-top: 13px;
+
+    @include respond-to($mq-xs, $mq-l) {
+      background-size: $sprite-background-size;
+    }
+
+    @include respond-to($mq-l) {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.directory__link {
+  &:link,
+  &:visited {
+    color: $color-heading-extra-small;
   }
 }
 
@@ -66,13 +84,12 @@
 
 .directory__title {
   @extend %font-heading-medium;
-  @include body(18, 24);
-  margin-top: 0;
+  @include body(16, 24);
+  margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit;
 
   @include respond-to($mq-m) {
     margin-bottom: $baseline-unit*2;
-    @include body(24, 30);
   }
 
   .theme-cy & {
@@ -83,8 +100,10 @@
 }
 
 .directory__description {
-  @include respond-to($mq-xs, $mq-m) {
-    margin-bottom: $baseline-unit*4;
-  }
+  display: none;
+  @include body(16, 24);
 
+  @include respond-to($mq-l) {
+    display: block;
+  }
 }

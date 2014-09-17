@@ -159,52 +159,62 @@ class StyleguideController < ApplicationController
       {
         title:       'Debt and borrowing',
         description: 'Taking control of debt, getting free debt advice, and how to borrow affordably',
-        path:        '#url'
+        path:        '#url',
+        icon:        'debt'
       },
       {
         title:       'Budgeting and managing money',
         description: 'Advice on running a bank account, planning your finances, and cutting costs',
-        path:        '#url'
+        path:        '#url',
+        icon:        'budgeting'
       },
       {
         title:       'Saving and investing',
         description: 'How to save money, types of savings account, and getting started with investing',
-        path:        '#url'
+        path:        '#url',
+        icon:        'saving'
       },
       {
         title:       'Work, pensions and retirement',
         description: 'Includes redundancy advice, types of pension and annuity, and automatic enrolment information',
-        path:        '#url'
+        path:        '#url',
+        icon:        'work'
       },
       {
         title:       'Benefits',
         description: 'Find out what benefits you’re entitled to and learn about Universal Credit',
-        path:        '#url'
+        path:        '#url',
+        icon:        'benefits'
       },
       {
         title:       'Births, deaths and family',
         description: 'Having a baby, making a will, and dealing with divorce and separation',
-        path:        '#url'
+        path:        '#url',
+        icon:        'births'
       },
       {
         title:       'Insurance',
         description: 'Help and advice on protecting your family and getting the right home and car insurance',
-        path:        '#url'
+        path:        '#url',
+        icon:        'insurance'
       },
       {
         title:       'Homes and mortgages',
         description: 'Everything you need to know about buying a home and choosing the right mortgage',
-        path:        '#url'
+        path:        '#url',
+        icon:        'homes'
       },
       {
         title:       'Care and disability',
         description: 'Choosing the right care services, support for carers and paying for the cost of care',
-        path:        '#url'
+        path:        '#url',
+        icon:        'care'
       },
       {
         title:       'Cars and travel',
         description: 'Help with buying and running a car, buying foreign currency, and sending money abroad',
-        path:        '#url'
+        path:        '#url',
+        icon:        'cars'
       }
     ].map(&:to_ostruct)
   end
