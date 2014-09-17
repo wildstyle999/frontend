@@ -1,11 +1,11 @@
 <div class="l-constrained">
-  <section class="l-tool-panels">
-    <%= heading_tag('Popular tools and calculators', level: 2, class: 'l-tool-panels__heading') %>
+  <section class="l-promos">
+    <%= heading_tag('Popular tools and calculators', level: 2, class: 'l-promos__heading') %>
 
     <% items.each do |item| %>
-    <div class="l-tool-panel">
-      <div>
-        <%= heading_tag(level: 3, class: 'l-tool-panel__heading') do %>
+    <div class="l-promos__item">
+      <div class="tool-promo">
+        <%= heading_tag(level: 3, class: 'promo__heading') do %>
           <%= link_to item[:url] do %>
             <span class="icon <%= item[:icon] %>"></span>
             <%= item[:heading] %>
@@ -17,12 +17,10 @@
     </div>
     <% end %>
 
-    <div class="l-tool-panel__view-all">
+    <div class="l-promo__view-all">
       <%= link_to('en/src') do %>
         View all...<span class="visually-hidden"> of our popular tools and calculators</span>
       <% end %>
     </div>
   </section>
-
-  <hr class="hr hr--inset">
 </div>

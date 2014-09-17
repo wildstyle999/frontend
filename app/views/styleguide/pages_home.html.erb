@@ -2,6 +2,8 @@
 
 <div class="l-home-directory">
   <div class="l-constrained">
+    <p class="l-home-directory__intro">Choose a section to get started…</p>
+
     <% if params.key?('welsh') %>
     <div class="theme-cy">
       <div class="temp-dynamic-directory-container">
@@ -16,6 +18,10 @@
   </div>
 </div>
 
-<%= render 'shared/tool_panels', items: t('home.show.tools') %>
+<%= render 'shared/tool_promos', items: t('home.show.tools') %>
 
-<%= render 'shared/promos', items: t('home.show.promoted') %>
+<div class="l-constrained">
+  <hr class="hr hr--inset">
+</div>
+
+<%= render 'shared/article_promos', items: t('home.show.promoted') %>
