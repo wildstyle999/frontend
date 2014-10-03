@@ -125,7 +125,7 @@
   margin-bottom: 16px;
   width: 180px;
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-s) {
     @include column(5);
     margin-top: $baseline-unit*2;
     margin-bottom: 0;
@@ -135,7 +135,7 @@
     width: 171px;
     height: 27px;
 
-    @include respond-to($mq-m) {
+    @include respond-to($mq-s) {
       width: 241px;
       height: 38px;
     }
