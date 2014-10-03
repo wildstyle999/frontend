@@ -4,7 +4,6 @@
 }
 
 .l-campaign-trust-banner__left {
-  padding-right: $baseline-unit;
   display: table-cell;
   vertical-align: middle;
 }
@@ -13,7 +12,34 @@
   display: table-cell;
   vertical-align: middle;
 
-  .logo {
-    float: right;
+  .mas-logo {
+    margin-left: $baseline-unit*2;
+    vertical-align: bottom;
+    width: 85px;
+    height: 30px;
+
+    @include respond-to(37.5em) {
+      width: 190px;
+    }
+
+    @include respond-to($mq-m) {
+      width:285px;
+      height: 45px;
+    }
+
+    @include respond-to($mq-l) {
+      position: relative;
+      top: -5px;
+      width: 280px;
+      height: 44px;
+    }
+  }
+
+  .mas-logo__text {
+    opacity: 0;
+
+    @include respond-to(37.5em) {
+      opacity: 1;
+    }
   }
 }
