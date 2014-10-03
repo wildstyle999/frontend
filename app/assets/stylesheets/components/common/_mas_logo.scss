@@ -1,9 +1,10 @@
 .mas-logo {
-  // all styles in layout
+  // no size specified
+  vertical-align: bottom;
 }
 
 .mas-logo__arches {
-  fill: #76B72A;
+  fill: $color-brand-green;
 }
 
 .mas-logo__text {

@@ -8,7 +8,7 @@
   }
 
   .authentication {
-    @include column(5);
+    @include column(4);
     display: none;
 
     @include respond-to($mq-m) {
@@ -121,22 +121,24 @@
 
 .l-header__logo {
   @include column(7);
-  margin-top: $baseline-unit*3;
-  margin-bottom: $baseline-unit*3;
+  margin-top: 18px;
+  margin-bottom: 16px;
   width: 180px;
 
-  display: block;
-  overflow: hidden;
-
   @include respond-to($mq-m) {
-    @include column(4);
+    @include column(5);
     margin-top: $baseline-unit*2;
     margin-bottom: 0;
-    width: 250px;
   }
 
-  &:focus {
-    border-bottom: 1px solid $color-primary-nav;
+  .mas-logo {
+    width: 171px;
+    height: 27px;
+
+    @include respond-to($mq-m) {
+      width: 241px;
+      height: 38px;
+    }
   }
 
   .mas-logo__arches,
@@ -144,6 +146,17 @@
     fill: $color-white;
   }
 }
+
+.l-header__link {
+  @include inline-block;
+  overflow: hidden;
+  padding-bottom: 3px;
+
+  &:focus {
+    border-bottom: 1px solid $color-primary-nav;
+  }
+}
+
 
 .l-menu-nav {
   @extend %clearfix;

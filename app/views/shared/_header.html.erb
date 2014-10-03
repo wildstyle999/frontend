@@ -1,16 +1,18 @@
 <header class="l-header" role="banner">
   <div class="l-constrained">
-    <%= link_to main_app.root_path, class: 'l-header__logo' do %>
-      <%= render '../assets/images/svg/logo.svg' %>
-    <% end %>
+    <div class="l-header__logo">
+      <%= link_to main_app.root_path, class: 'l-header__link' do %>
+        <%= render '../assets/images/svg/logo.svg' %>
+      <% end %>
+    </div>
 
     <%= render 'shared/mobile_nav' %>
     <%= render 'shared/authentication' %>
 
     <% if display_search_box_in_header? %>
-      <div class="l-search" id="search-bar">
-        <%= render 'shared/search', search_in_page_header: true %>
-      </div>
+    <div class="l-search" id="search-bar">
+      <%= render 'shared/search', search_in_page_header: true %>
+    </div>
     <% end %>
   </div>
 </header>
