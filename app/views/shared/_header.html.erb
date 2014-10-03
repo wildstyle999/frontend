@@ -1,13 +1,10 @@
 <header class="l-header" role="banner">
   <div class="l-constrained">
-    <div class="mas-logo">
-      <%= link_to main_app.root_path, class: 'mas-logo__link' do %>
-        <%= image_tag("logo-sprite.png", alt: 'the Money Advice Service', class: 'mas-logo__img') %>
-      <% end %>
-    </div>
+    <%= link_to main_app.root_path, class: 'l-header__logo' do %>
+      <%= render '../assets/images/svg/logo.svg' %>
+    <% end %>
 
     <%= render 'shared/mobile_nav' %>
-
     <%= render 'shared/authentication' %>
 
     <% if display_search_box_in_header? %>

@@ -39,8 +39,11 @@
     margin-bottom:0 !important;
   }
 
-  .mas-logo__img {
-    margin-left: 0;
+  .l-header__logo {
+    .mas-logo__arches,
+    .mas-logo__text {
+      fill: $color-black;
+    }
   }
 
   .l-header {

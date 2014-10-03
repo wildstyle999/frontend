@@ -1,19 +1,11 @@
-.mas-logo__img {
-  max-width: none;
-  width: 200%;
-  margin-left: -100%;
+.mas-logo {
+  // all styles in layout
 }
 
-.mas-logo__link {
-  display: block;
-  overflow: hidden;
-  width: 180px;
+.mas-logo__arches {
+  fill: #76B72A;
+}
 
-  @include respond-to($mq-m) {
-    width: 250px;
-  }
-
-  &:focus {
-    border-bottom: 1px solid $color-primary-nav;
-  }
+.mas-logo__text {
+  fill: $color-black;
 }

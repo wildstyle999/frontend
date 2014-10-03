@@ -7,18 +7,6 @@
     display: none;
   }
 
-  .mas-logo {
-    @include column(7);
-    margin-top: $baseline-unit*3;
-    margin-bottom: $baseline-unit*3;
-
-    @include respond-to($mq-m) {
-      @include column(4);
-      margin-top: $baseline-unit*2;
-      margin-bottom: 0;
-    }
-  }
-
   .authentication {
     @include column(5);
     display: none;
@@ -128,6 +116,32 @@
     @include respond-to($mq-m) {
       display: block;
     }
+  }
+}
+
+.l-header__logo {
+  @include column(7);
+  margin-top: $baseline-unit*3;
+  margin-bottom: $baseline-unit*3;
+  width: 180px;
+
+  display: block;
+  overflow: hidden;
+
+  @include respond-to($mq-m) {
+    @include column(4);
+    margin-top: $baseline-unit*2;
+    margin-bottom: 0;
+    width: 250px;
+  }
+
+  &:focus {
+    border-bottom: 1px solid $color-primary-nav;
+  }
+
+  .mas-logo__arches,
+  .mas-logo__text {
+    fill: $color-white;
   }
 }
 
