@@ -31,9 +31,9 @@
   padding: 15px 13px 11px 15px;
   &.is-on {
     &:before {
-      @include triangle(bottom, 7, 14, $color-header-buttons);
+      @include triangle(bottom, 9, 14, $color-header-buttons);
       position: absolute;
-      bottom: 2px;
+      bottom: 0;
       right: 23px;
     }
   }
@@ -41,9 +41,9 @@
 
 .mobile-nav__link--menu.is-on {
   &:before {
-    @include triangle(bottom, 7, 14, $color-header-buttons);
+    @include triangle(bottom, 9, 14, $color-header-buttons);
     position: absolute;
-    bottom: 2px;
+    bottom: 0;
     left: 27px;
   }
 }
@@ -53,6 +53,6 @@
 .mobile-nav__link--menu.is-on:hover,
 .mobile-nav__link--menu.is-on:focus {
   &:before {
-    @include triangle(bottom, 7, 14, $color-green-secondary);
+    @include triangle(bottom, 9, 14, $color-green-secondary);
   }
 }
