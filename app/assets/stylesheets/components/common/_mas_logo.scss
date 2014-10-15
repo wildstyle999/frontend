@@ -1,6 +1,28 @@
+.mas-logo-container {
+
+}
+
 .mas-logo {
-  // no size specified
   vertical-align: bottom;
+}
+
+.mas-logo--img {
+  background-image: image_url('logo-sprite.png');
+  background-position: -240px 0;
+  background-size: 200%;
+  background-repeat: no-repeat;
+
+  .svg & {
+    display: none;
+  }
+}
+
+.mas-logo--svg {
+  display: none;
+
+  .svg & {
+    display: block;
+  }
 }
 
 .mas-logo__arches {
