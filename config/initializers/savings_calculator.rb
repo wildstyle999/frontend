@@ -1,1 +1,1 @@
-SavingsCalculator.parent_controller = '::EmbeddedToolsController'
+# SavingsCalculator.parent_controller = '::EmbeddedToolsController'

@@ -38,5 +38,7 @@ module Frontend
     config.to_prepare do
       Devise::Mailer.layout 'email'
     end
+
+    config.sass = ActiveSupport::OrderedOptions.new
   end
 end

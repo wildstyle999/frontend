@@ -16,7 +16,7 @@ gem 'cream'
 gem 'delayed_job_active_record'
 gem 'devise'
 gem 'devise-encryptable'
-gem 'dough-ruby', '~> 3.0'
+gem 'dough-ruby', path: '~/mas/dough'
 gem 'draper', '~> 1.3.0'
 gem 'faraday-conductivity'
 gem 'faraday_middleware'
@@ -41,22 +41,12 @@ gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_timeliness'
 
-gem 'budget_planner', '~> 4.0'
-gem 'car_cost_tool', '~> 1.0.1'
-gem 'debt_advice_locator', '~> 2.0'
-gem 'debt_free_day_calculator', '~> 2.0'
-gem 'mortgage_calculator', '~> 1.0.0'
-gem 'pensions_calculator', '~> 0.2'
-gem 'savings_calculator', '~> 1.0.0'
-
 group :assets do
   gem 'autoprefixer-rails'
   gem 'coffee-rails', '~> 4.0.0'
   gem 'jshint_ruby'
   gem 'csslint_ruby'
-  gem 'compass-rails'
   gem 'jquery-rails'
-  gem 'sass-rails', '~> 4.0.0'
 end
 
 group :development do

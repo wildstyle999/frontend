@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017134140) do
+ActiveRecord::Schema.define(version: 20141015103751) do
 
   create_table "action_items", force: true do |t|
     t.string   "article_id"
@@ -184,7 +184,7 @@ ActiveRecord::Schema.define(version: 20141017134140) do
 
   create_table "car_cost_tool_fuel_prices", force: true do |t|
     t.string   "fuel_type"
-    t.decimal  "price_in_pence", precision: 10, scale: 6
+    t.decimal  "price_in_pence", precision: 10, scale: 0
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
   end
@@ -305,7 +305,7 @@ ActiveRecord::Schema.define(version: 20141017134140) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "debt_health_answer_resources", ["answer_id", "resource_id"], name: "index_on_answer_id_and_resource_id", using: :btree
+  add_index "debt_health_answer_resources", ["answer_id", "resource_id"], name: "index_debt_health_answer_resources_on_answer_id_and_resource_id", using: :btree
 
   create_table "debt_health_answers", force: true do |t|
     t.string   "title"
@@ -811,17 +811,17 @@ ActiveRecord::Schema.define(version: 20141017134140) do
   add_index "topics_users", ["user_id"], name: "topics_users_user_id_fk", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "email",                                     default: "",    null: false
-    t.string   "encrypted_password",                        default: ""
+    t.string   "email",                              default: "",    null: false
+    t.string   "encrypted_password",                 default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
-    t.integer  "sign_in_count",                             default: 0
+    t.integer  "sign_in_count",                      default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                                null: false
-    t.datetime "updated_at",                                                null: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
     t.boolean  "accept_terms_conditions"
     t.string   "first_name"
     t.string   "last_name"
@@ -829,26 +829,25 @@ ActiveRecord::Schema.define(version: 20141017134140) do
     t.string   "post_code"
     t.string   "age_range"
     t.string   "gender"
-    t.boolean  "newsletter_subscription",                   default: false
+    t.boolean  "newsletter_subscription",            default: false
     t.string   "customer_id"
     t.text     "health_check_result"
-    t.boolean  "active",                                    default: true
+    t.boolean  "active",                             default: true
     t.date     "date_of_birth"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.string   "csr_id"
-    t.string   "invitation_token",               limit: 60
+    t.string   "invitation_token",        limit: 60
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
-    t.integer  "failed_attempts",                           default: 0
+    t.integer  "failed_attempts",                    default: 0
     t.string   "unlock_token"
     t.datetime "locked_at"
-    t.string   "temporary_authentication_token"
     t.string   "goal_statement"
     t.string   "goal_deadline"
   end
@@ -856,6 +855,5 @@ ActiveRecord::Schema.define(version: 20141017134140) do
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  add_index "users", ["temporary_authentication_token"], name: "index_users_on_temporary_authentication_token", unique: true, using: :btree
 
 end

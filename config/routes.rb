@@ -44,42 +44,6 @@ Rails.application.routes.draw do
       end
     end
 
-    Feature.with(:budget_planner) do
-      bpmp = ToolMountPoint.for(:budget_planner)
-      budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/
-
-      mount BudgetPlanner::Engine => '/tools/:tool_id(/:incognito)',
-        constraints: { tool_id: budget_planner_url_constraint, incognito: /incognito/ }
-    end
-
-    Feature.with(:car_cost_tool) do
-      mount CarCostTool::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:car_cost_tool)
-    end
-
-    Feature.with(:debt_free_day_calculator) do
-      mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:debt_free_day_calculator)
-    end
-
-    Feature.with(:debt_advice_locator) do
-      mount DebtAdviceLocator::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:debt_advice_locator)
-    end
-
-    Feature.with(:mortgage_calculator) do
-      mount MortgageCalculator::Engine => '/tools/:tool_id',
-            constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
-    end
-
-    mount PensionsCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:pensions_calculator)
-
-    Feature.with(:savings_calculator) do
-      mount SavingsCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:savings_calculator)
-    end
-
     Feature.with(:annuities_landing_page) do
       get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
     end
