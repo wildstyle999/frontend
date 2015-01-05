@@ -69,7 +69,3 @@ end
 Then(/^I should see that the action plan appears in those categories$/) do
   expect(action_plan_page.breadcrumbs.text).to eq(current_action_plan.context)
 end
-
-Then(/^I should see breadcrumbs for the news page$/) do
-  expect(news_page.breadcrumbs.text).to eq('Home')
-end
