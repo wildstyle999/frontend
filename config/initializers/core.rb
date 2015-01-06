@@ -37,7 +37,7 @@ Core::Registry::Repository[:static_page] =
   Core::Repository::StaticPages::PublicWebsite.new
 
 Core::Registry::Repository[:news] =
-  Core::Repository::News::PublicWebsite.new
+  Core::Repository::CMS::CMS.new(fallback: Core::Repository::News::PublicWebsite.new)
 
 Core::Registry::Repository[:newsletter_subscription] =
   Core::Repository::NewsletterSubscriptions::PublicWebsite.new
