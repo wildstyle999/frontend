@@ -8,7 +8,6 @@ RSpec.describe NewsArticleDecorator do
   it { is_expected.to respond_to(:title) }
   it { is_expected.to respond_to(:description) }
   it { is_expected.to respond_to(:content) }
-  it { is_expected.to respond_to(:date) }
   it { is_expected.to respond_to(:intro) }
 
   describe '#content' do
@@ -22,18 +21,6 @@ RSpec.describe NewsArticleDecorator do
 
     it 'does not remove quoted phrases' do
       expect(html.search('//p/em')).to_not be_empty
-    end
-  end
-
-  describe '#date' do
-    let(:attributes) { { date: '2014-03-17T09:42:11+00:00' } }
-
-    it "returns the date with format 'day abbr_month year'" do
-      expect(decorator.date).to eq('17 Mar 2014')
-    end
-
-    it "returns the date with format 'year month day time'" do
-      expect(decorator.date(format: :long)).to eq('2014-03-17 09:42')
     end
   end
 

@@ -8,10 +8,6 @@ class NewsArticleDecorator < ContentItemDecorator
     processors << [HTMLProcessor::NodeRemover, [HTMLProcessor::IMAGE_AUTHOR]]
   end
 
-  def date(options = {})
-    h.l(object.date, format: options.fetch(:format, :short))
-  end
-
   def intro
     processor = HTMLProcessor::NodeContents
     processor.new(object.body).process(HTMLProcessor::INTRO_PARAGRAPH).html_safe
