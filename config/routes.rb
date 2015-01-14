@@ -103,6 +103,8 @@ Rails.application.routes.draw do
     resources :news, only: [:show, :index]
     resource :advice, only: :show
 
+    resources :corporate
+
     resources :campaigns, only: 'show',
                               path: 'campaigns',
                               constraints: {
