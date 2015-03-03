@@ -1,0 +1,143 @@
+.category__title {
+  margin-bottom: 0;
+}
+
+.category__image {
+  width: 44%;
+  float: right;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*8.5;
+  }
+
+  @include respond-to($mq-xl) {
+    margin-top: $baseline-unit*10;
+  }
+}
+
+.category-top-items__intro {
+  display: none;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*2;
+    clear: none;
+    display: block;
+
+    &:after {
+      clear: none;
+    }
+  }
+}
+
+.category-quick-links__text {
+  color: $color-true-black;
+  font-weight: 700;
+  margin-bottom: $baseline-unit;
+}
+
+.category-quick-links-list + .intro {
+  margin-top: $baseline-unit*4;
+}
+
+.category-quick-links-list-item {
+  display: inline-block;
+  @include body(22, 40);
+  font-weight: 500;
+  margin-bottom: 0;
+
+  &:after {
+    .category-quick-links & {
+      content: ", ";
+      margin-right: 5px;
+    }
+  }
+
+  &:last-child {
+    &:after {
+      content: "";
+    }
+  }
+}
+
+.category-quick-links-list-item__link {
+  position: relative;
+  text-decoration: none;
+  border-bottom: 3px solid $color-yellow-light;
+  padding-bottom: 3px;
+
+  &:link,
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $color-true-black;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom-color: #edde74;
+  }
+}
+
+.category-promo {
+  background: $color-black;
+  clear: both;
+  overflow: hidden;
+  position: relative;
+}
+
+.category-promo__inner {
+  @include column(12);
+}
+
+.category-promo__link {
+  display: block;
+  padding: $baseline-unit*9 55px $baseline-unit*12 0;
+
+  @include respond-to($mq-m) {
+    padding: $baseline-unit*9 55px $baseline-unit*9 $category-inset;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .category-promo__text {
+      text-decoration: underline;
+    }
+  }
+}
+
+.category-promo__headline {
+  color: $color-yellow-light;
+  @include body(18, 24);
+  margin: 0;
+}
+
+.category-promo__text {
+  color: $color-white;
+  @include body(24, 30);
+  font-weight: 500;
+  margin: $baseline-unit 0;
+
+  @include respond-to($mq-m) {
+    margin-right: $baseline-unit*8;
+  }
+}
+
+.category-promo__calculator {
+  fill: $color-white;
+  height: 51px;
+  position: absolute;
+  top: 24%;
+  right: 1.66666%;
+  width: 51px;
+
+  @include respond-to($mq-m) {
+    margin-right: $category-inset;
+  }
+
+  @include respond-to($mq-l) {
+    top: 30%;
+  }
+}

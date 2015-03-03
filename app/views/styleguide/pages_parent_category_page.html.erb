@@ -1,13 +1,33 @@
-<div class="l-main">
-  <div class="l-main__row">
-    <main class="l-main__cell-single" role="main">
-      <h1>Leaving school or college</h1>
+<%= render 'shared/svg' %>
 
-      <p class="intro">Help and advice on staying on in education, moving into work and paying your own
-        way as a young adult</p>
+<div class="l-main category">
+  <div class="l-main__row">
+    <main class="l-main__cell-full" role="main">
+      <%= image_tag('categories/debt.gif', alt: '', class: 'category__image') %>
+      <h1 class="category__title">Leaving school or college</h1>
+      <p class="intro category-top-items__intro">Help and advice on staying on in education, moving into work and paying your own way as a young adult. Help and advice on staying on in education.</p>
+
+      <div class="category-quick-links">
+        <p class="category-quick-links__text">How can we help?</p>
+
+        <ul class="unstyled-list category-quick-links-list">
+          <li class="category-quick-links-list-item"><a href="#" class="category-quick-links-list-item__link">Take control of debt</a></li><li class="category-quick-links-list-item"><a href="#" class="category-quick-links-list-item__link">Before you borrow</a></li><li class="category-quick-links-list-item"><a href="#" class="category-quick-links-list-item__link">I'm already in debt</a></li><li class="category-quick-links-list-item"><a href="#" class="category-quick-links-list-item__link">Mortgages</a></li><li class="category-quick-links-list-item"><a href="#" class="category-quick-links-list-item__link">Loans</a></li><li class="category-quick-links-list-item"><a href="#" class="category-quick-links-list-item__link">Credit cards</a></li>
+        </ul>
+      </div>
 
       <%= render 'styleguide/shared/category_detail' %>
     </main>
+    <div class="category-promo">
+      <div class="category-promo__inner">
+        <a href="#" class="category-promo__link">
+          <h2 class="category-promo__headline">Take control of debt</h2>
+          <p class="category-promo__text">Take our quick and easy health check</p>
+          <svg xmlns="http://www.w3.org/2000/svg" class="category-promo__calculator">
+            <use xlink:href="#icon-calculator"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
