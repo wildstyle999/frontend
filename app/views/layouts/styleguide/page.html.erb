@@ -19,6 +19,8 @@
     <%= yield %>
   </div>
 
-  <%= render 'shared/contact_panels', contact_panels_border_top: contact_panels_border_top?, contact_panels_homepage: contact_panels_homepage? %>
+  <%= render 'shared/stripe_banner', item: t('home.show.stripe_banner') %>
+
+  <%= render 'shared/contact_panels', contact_panels_border_top: contact_panels_border_top?, contact_panels_no_top_border_and_margin: contact_panels_no_top_border_and_margin? %>
   <%= render 'shared/footer' %>
 <% end %>

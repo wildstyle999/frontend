@@ -78,6 +78,10 @@ class StyleguideController < ApplicationController
   end
 
   def pages_parent_category_page
+    def contact_panels_no_top_border_and_margin?
+      true
+    end
+
     render layout: 'styleguide/page'
   end
 

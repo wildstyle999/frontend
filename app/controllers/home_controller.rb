@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     false
   end
 
-  def contact_panels_homepage?
+  def contact_panels_no_top_border_and_margin?
     true
   end
 end

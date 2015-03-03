@@ -57,11 +57,11 @@ class ApplicationController < ActionController::Base
 
   helper_method :contact_panels_border_top?
 
-  def contact_panels_homepage?
+  def contact_panels_no_top_border_and_margin?
     false
   end
 
-  helper_method :contact_panels_homepage?
+  helper_method :contact_panels_no_top_border_and_margin?
 
   def display_skip_to_main_navigation?
     true
