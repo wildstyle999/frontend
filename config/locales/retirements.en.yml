@@ -26,10 +26,10 @@ en:
         links:
           - text: "Checklist - preparing for retirement"
             url: /en/articles/checklist-things-to-do-as-retirement-approaches
-          - text: "When can I retire?"
+          - text: "When can I afford to retire?"
             url: /en/articles/when-can-i-afford-to-retire
-          - text: "Budget planner"
-            url: /en/tools/budget-planner
+          - text: "Budgeting in retirement"
+            url: /en/pensions-and-retirement/budgeting
           - text: Pension calculator
             url: /en/tools/pension-calculator
       - title: "What you've got"
@@ -60,9 +60,9 @@ en:
               url: /en/articles/how-to-spot-a-pension-scam
             - text: "Trace lost pensions and request pension forecasts"
               url: /en/articles/trace-lost-pensions-and-request-pension-forecasts
-            - text: "Pension problems: your options if something goes wrong"
+            - text: "Dealing with pension problems and making a complaint"
               url: /en/articles/your-options-if-things-go-wrong-with-your-pension
-            - text: "Ways to boost your pension in the run up to retirement"
+            - text: "Ways to boost your pension in the run-up to retirementretirement"
               url: /en/articles/ways-to-boost-your-pension-in-the-run-up-to-retirement
         - title: Retirement products
           links:
@@ -93,19 +93,19 @@ en:
       panels2:
         - title: Managing money
           links:
-            - text: "Budget planner"
-              url: /en/tools/budget-planner
+            - text: "Budgeting in retirement"
+              url: /en/pensions-and-retirement/budgeting
             - text: "A guide to tax in retirement"
               url: /en/articles/tax-and-benefits-when-youre-retired
             - text: "Manage your money in retirement"
               url: /en/articles/manage-your-money-in-retirement
             - text: "Work out your likely retirement income"
               url: /en/articles/estimate-your-retirement-income
-            - text: "How long will your money last?"
+            - text: "How long will your money last in retirement?"
               url: /en/articles/how-long-will-your-money-last-in-retirement
         - title: Financial advice
           links:
-            - text: "Retirement - why should you get advice?"
+            - text: "Retirement - why should I get advice?"
               url: /en/articles/when-and-where-to-get-pensions-help-and-advice
             - text: "Choosing a financial adviser"
               url: /en/articles/choosing-a-financial-adviser
@@ -123,7 +123,7 @@ en:
               url: "/en/articles/planning-and-funding-your-long-term-care"
             - text: "What to do about someone's pension when they've died?"
               url: "/en/articles/what-to-do-about-someones-pension-when-theyve-died"
-            - text: "Pensioner bonds"
+            - text: "Pensioner bonds: a guide to the fixed-rate savings bonds for over-65s"
               url: /en/articles/pensioner-bonds-a-guide-to-the-fixed-rate-savings-bonds-for-over-65s
 
   budgeting:
